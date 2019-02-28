@@ -23,8 +23,11 @@ export class ProductCartComponent implements OnInit {
   ngOnInit() {
   }
 
-  addItem(item){
-    this.cartShopServices.cartService.push(item);
+  addItem(item:jsonProductItem){
+    const cartItem= new CartItem();
+    cartItem.product=item;
+    cartItem.amount=1; 
+    this.cartShopServices.cartService.push(cartItem);
   }
 
   /*addItem(item){

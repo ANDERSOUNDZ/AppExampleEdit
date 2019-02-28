@@ -17,8 +17,6 @@ export class CartItemListComponent implements OnInit {
   ngOnInit() {
   }
 
-  evento2(){
-    this.outItem.emit(this.productItemAll);
-  }
+  
 
 }

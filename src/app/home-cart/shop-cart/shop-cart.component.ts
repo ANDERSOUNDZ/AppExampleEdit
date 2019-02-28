@@ -9,7 +9,16 @@ import { jsonProductItem, CartItem } from 'src/app/model/jsonProduct';
 })
 export class ShopCartComponent implements OnInit {
 
-  olistItem: jsonProductItem;
+  itemTotal: CartItem [] = [
+
+    {
+      product: {
+        id: "string",
+        name: "string"
+      },
+      amount: 1
+    }
+  ]
   
   constructor(public cartShopService: CartShopService) { }
 
@@ -18,11 +27,11 @@ export class ShopCartComponent implements OnInit {
   ngOnInit() {
   }
 
-  deleteProduct(item){
+  /*deleteProduct(item){
     this.olistItem = item;
     const index = this.cartShopService.cartService.indexOf(item);
     this.cartShopService.cartService.splice(index,1);
-  }
+  }*/
 
 
 }

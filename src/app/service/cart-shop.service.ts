@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { jsonProductItem } from '../model/jsonProduct';
+import { jsonProductItem, CartItem } from '../model/jsonProduct';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,7 @@ import { jsonProductItem } from '../model/jsonProduct';
 
 export class CartShopService {
 
-  public cartService: jsonProductItem [] = [];
+  public cartService: CartItem [] = [];
 
   constructor() { }
 }
