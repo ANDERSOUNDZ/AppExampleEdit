@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule } from '@angular/material';
-import { HomeCartComponent } from '../home-cart/home-cart.component';
-import { ProductCartComponent } from '../home-cart/product-cart/product-cart.component';
+import { 
 
-
+  MatToolbarModule,
+  MatButtonModule
+ 
+} from '@angular/material';
 
 @NgModule({
-  declarations: [HomeCartComponent, ProductCartComponent],
+  declarations:
+  [],
   imports: [
-    CommonModule
+    CommonModule,
+    MatToolbarModule,
+    MatButtonModule 
   ],
   exports: [
-    MatToolbarModule 
+    MatToolbarModule,
+    MatButtonModule 
   ]
 })
+
 export class MaterialModule { }

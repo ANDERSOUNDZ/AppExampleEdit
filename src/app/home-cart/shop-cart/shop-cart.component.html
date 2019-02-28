@@ -1,3 +1,9 @@
-<p>
-  shop-cart works!
-</p>
+<app-product-list-item-a *ngFor="let item of cartShopService.cartService" [product]="item"></app-product-list-item-a>
+
+
+
+<!--<app-product-list-item-a 
+*ngFor="let item of cartShopService.cartService"
+[product]="item"
+(giveProduct)="deleteProduct($event)"></app-product-list-item-a>
+-->
