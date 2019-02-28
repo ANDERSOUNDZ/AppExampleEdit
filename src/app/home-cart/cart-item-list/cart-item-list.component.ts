@@ -18,10 +18,19 @@ export class CartItemListComponent implements OnInit {
   ngOnInit() {
   }
 
-  deleteProduct(item){
-    this.productItemAll = item;
-    const index = this.cartShopService.cartService.indexOf(item);
+  deleteProduct(){
+    const index = this.cartShopService.cartService.indexOf(this.productItemAll);
     this.cartShopService.cartService.splice(index,1);
   }
 
+  increase(){
+    this.productItemAll.amount++;
+  }
+
+  decrease(){
+      this.productItemAll.amount--;
+      if(this.productItemAll.amount == 0){
+          this.deleteProduct();
+      }
+  }
 }

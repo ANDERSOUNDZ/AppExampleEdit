@@ -22,8 +22,6 @@ export class ShopCartComponent implements OnInit {
   
   constructor(public cartShopService: CartShopService) { }
 
-  
-
   ngOnInit() {
   }
 
