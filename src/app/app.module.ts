@@ -9,8 +9,10 @@ import { MaterialModule } from './material/material.module';
 import { HomeCartComponent } from './home-cart/home-cart.component';
 import { ProductCartComponent } from './home-cart/product-cart/product-cart.component';
 import { ShopCartComponent } from './home-cart/shop-cart/shop-cart.component';
-import { ProductListItemAComponent } from './home-cart/product-list-item-a/product-list-item-a.component';
-import { ProductListItemBComponent } from './home-cart/product-list-item-b/product-list-item-b.component';
+import { ProductItemListComponent } from './home-cart/product-item-list/product-item-list.component';
+import { CartItemListComponent } from './home-cart/cart-item-list/cart-item-list.component';
+
+
 
 
 @NgModule({
@@ -19,8 +21,9 @@ import { ProductListItemBComponent } from './home-cart/product-list-item-b/produ
     HomeCartComponent,
     ProductCartComponent,
     ShopCartComponent,
-    ProductListItemAComponent,
-    ProductListItemBComponent    
+    ProductItemListComponent,
+    CartItemListComponent,
+     
   ],
   imports: [
     BrowserModule,

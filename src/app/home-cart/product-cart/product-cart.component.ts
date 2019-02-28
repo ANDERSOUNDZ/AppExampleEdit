@@ -18,19 +18,6 @@ export class ProductCartComponent implements OnInit {
 
   ];
 
-  listItem2: CartItem [] = [
-
-    {
-      product:
-      {
-        id: "**",
-        name: " Anderson"
-      },
-      amount: 1
-    }
-
-  ];
-
   constructor(public cartShopServices: CartShopService) { }
 
   ngOnInit() {
