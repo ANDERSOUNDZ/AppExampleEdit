@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CartItem } from 'src/app/model/jsonProduct';
 
 @Component({
   selector: 'app-cart-item-list',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartItemListComponent implements OnInit {
 
+  @Input() productItemAll: CartItem;
+
+  @Output() outItem= new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  evento2(){
+    this.outItem.emit(this.productItemAll);
   }
 
 }
