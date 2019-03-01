@@ -15,19 +15,19 @@ export class ProductCartComponent implements OnInit {
 
     {
       id: "01",
-      name: " Anderson"
+      name: " Celular"
     },
     {
       id: "02",
-      name: " Miguel"
+      name: "Plasma"
     },
     {
       id: "03",
-      name: " Andres"
+      name: "Lavadora"
     },
     {
       id: "04",
-      name: " Jhon"
+      name: "Laptop"
     }
 
 

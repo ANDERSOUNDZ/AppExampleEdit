@@ -1,8 +1,13 @@
-<app-cart-item-list *ngFor="let item of cartShopService.cartService" [(productItemAll)]="item" (outItem)="deleteProduct($event)" (outItem2)="increase($event)"(outItem3)="decrease($event)">
-</app-cart-item-list>
+
 
 <!--<app-product-list-item-a 
 *ngFor="let item of cartShopService.cartService"
 [product]="item"
 (giveProduct)="deleteProduct($event)"></app-product-list-item-a>
 -->
+<br>
+<mat-card>
+        <h1 fxAlign="center">Productos del Carrito</h1>
+        <app-cart-item-list *ngFor="let item of cartShopService.cartService" [(productItemAll)]="item" (outItem)="deleteProduct($event)" (outItem2)="increase($event)"(outItem3)="decrease($event)">
+        </app-cart-item-list>
+</mat-card>

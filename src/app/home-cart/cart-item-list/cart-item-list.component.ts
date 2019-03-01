@@ -9,8 +9,6 @@ import { CartShopService } from 'src/app/service/cart-shop.service';
 })
 export class CartItemListComponent implements OnInit {
 
-  nombre = "anderson";
-
   @Input() productItemAll: CartItem;
 
   @Output() outItem= new EventEmitter();

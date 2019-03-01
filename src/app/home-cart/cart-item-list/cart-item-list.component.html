@@ -1,10 +1,20 @@
-<p>
-  {{productItemAll.product.id}}
-  {{productItemAll.product.name}}
-  <input type="text" [(ngModel)]="productItemAll.amount">
-  
-</p>
 
-<button mat-button (click)="evento()">borrar</button>
-<button mat-button (click)="evento1()">aumentar</button>
-<button mat-button (click)="evento2()">disminuir</button>     
+
+
+
+<mat-card>
+
+    <strong>Numero de producto: </strong>{{productItemAll.product.id}} <br>
+    <strong>Nombre de producto: </strong>{{productItemAll.product.name}} <br>
+  
+    
+    <button mat-button><mat-icon (click)="evento1()">add_circle</mat-icon></button>
+    
+            <mat-form-field>
+                    <input matInput type="number" [(ngModel)]="productItemAll.amount">
+            </mat-form-field>
+            <!--<input mat-input type="number" [(ngModel)]="productItemAll.amount">-->
+    <button mat-button><mat-icon (click)="evento2()">remove_circle</mat-icon></button>
+    <button mat-button><mat-icon (click)="evento()">delete</mat-icon></button>
+
+</mat-card><br>

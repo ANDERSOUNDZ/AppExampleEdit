@@ -4,7 +4,9 @@ import {
 
   MatToolbarModule,
   MatButtonModule,
-  MatInputModule
+  MatInputModule,
+  MatIconModule,
+  MatCardModule
  
 } from '@angular/material';
 
@@ -15,12 +17,16 @@ import {
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatInputModule 
+    MatInputModule,
+    MatIconModule,
+    MatCardModule 
   ],
   exports: [
     MatToolbarModule,
     MatButtonModule,
-    MatInputModule 
+    MatInputModule,
+    MatIconModule,
+    MatCardModule 
   ]
 })
 

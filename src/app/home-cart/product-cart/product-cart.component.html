@@ -1,1 +1,9 @@
-<app-product-item-list *ngFor="let item of listItem" [product]="item" (giveProduct)="addItem($event)"></app-product-item-list>
+<br>
+<mat-card>
+
+        <h1 fxAlign="center">Productos</h1>
+        <app-product-item-list *ngFor="let item of listItem" [product]="item" (giveProduct)="addItem($event)"></app-product-item-list>
+
+</mat-card>
+
+
