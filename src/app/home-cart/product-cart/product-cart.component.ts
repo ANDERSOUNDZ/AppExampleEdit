@@ -9,12 +9,27 @@ import { CartShopService } from 'src/app/service/cart-shop.service';
 })
 export class ProductCartComponent implements OnInit {
   
+  
+
   listItem: jsonProductItem [] = [
 
     {
       id: "01",
       name: " Anderson"
+    },
+    {
+      id: "02",
+      name: " Miguel"
+    },
+    {
+      id: "03",
+      name: " Andres"
+    },
+    {
+      id: "04",
+      name: " Jhon"
     }
+
 
   ];
 

@@ -9,20 +9,41 @@ import { CartShopService } from 'src/app/service/cart-shop.service';
 })
 export class CartItemListComponent implements OnInit {
 
+  nombre = "anderson";
+
   @Input() productItemAll: CartItem;
 
   @Output() outItem= new EventEmitter();
+
+  @Output() outItem2= new EventEmitter();
+
+  @Output() outItem3= new EventEmitter();
+  
 
   constructor(public cartShopService: CartShopService) { }
 
   ngOnInit() {
   }
 
+  evento(){
+    this.outItem.emit(this.productItemAll); 
+  }
+
+  evento1(){
+    this.outItem2.emit(this.productItemAll); 
+  }
+  
+  evento2(){
+    this.outItem3.emit(this.productItemAll); 
+  }
+
+  /*
   deleteProduct(){
     const index = this.cartShopService.cartService.indexOf(this.productItemAll);
     this.cartShopService.cartService.splice(index,1);
-  }
+  }*/
 
+  /*
   increase(){
     this.productItemAll.amount++;
   }
@@ -33,4 +54,6 @@ export class CartItemListComponent implements OnInit {
           this.deleteProduct();
       }
   }
+  */
+
 }

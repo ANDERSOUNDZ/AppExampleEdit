@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CartShopService } from 'src/app/service/cart-shop.service';
 import { jsonProductItem, CartItem } from 'src/app/model/jsonProduct';
 
@@ -9,6 +9,8 @@ import { jsonProductItem, CartItem } from 'src/app/model/jsonProduct';
 })
 export class ShopCartComponent implements OnInit {
 
+  
+
   itemTotal: CartItem [] = [
 
     {
@@ -18,6 +20,7 @@ export class ShopCartComponent implements OnInit {
       },
       amount: 1
     }
+
   ]
   
   constructor(public cartShopService: CartShopService) { }
@@ -25,11 +28,29 @@ export class ShopCartComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteProduct(item){
+    this.itemTotal=item;
+    const index = this.cartShopService.cartService.indexOf(item);
+    this.cartShopService.cartService.splice(index,1);
+  }
+
+  increase(item){
+     this.itemTotal=item;
+     item.amount++;
+  }
+
+  decrease(item){
+    this.itemTotal=item;
+    item.amount--;
+    if(item.amount == 0){
+        this.deleteProduct(item);
+    }
+ }
+
   /*deleteProduct(item){
     this.olistItem = item;
     const index = this.cartShopService.cartService.indexOf(item);
     this.cartShopService.cartService.splice(index,1);
   }*/
-
 
 }

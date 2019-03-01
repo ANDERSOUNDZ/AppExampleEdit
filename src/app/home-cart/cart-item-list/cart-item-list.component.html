@@ -1,8 +1,10 @@
-<p  style="cursor: pointer">
+<p>
   {{productItemAll.product.id}}
   {{productItemAll.product.name}}
-  {{productItemAll.amount}}
+  <input type="text" [(ngModel)]="productItemAll.amount">
+  
 </p>
-<button mat-button (click)="deleteProduct()">borrar</button>
-<button mat-button (click)="increase()">aumentar</button>
-<button mat-button (click)="decrease()">disminuir</button>
+
+<button mat-button (click)="evento()">borrar</button>
+<button mat-button (click)="evento1()">aumentar</button>
+<button mat-button (click)="evento2()">disminuir</button>     

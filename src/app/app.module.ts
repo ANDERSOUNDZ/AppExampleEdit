@@ -11,6 +11,7 @@ import { ProductCartComponent } from './home-cart/product-cart/product-cart.comp
 import { ShopCartComponent } from './home-cart/shop-cart/shop-cart.component';
 import { ProductItemListComponent } from './home-cart/product-item-list/product-item-list.component';
 import { CartItemListComponent } from './home-cart/cart-item-list/cart-item-list.component';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -30,7 +31,8 @@ import { CartItemListComponent } from './home-cart/cart-item-list/cart-item-list
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
